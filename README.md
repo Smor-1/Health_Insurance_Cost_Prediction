@@ -1,2 +1,2 @@
 # group_analysis
-Using linear regression to predict health insurance costs. 
+Using health coverage, health spending and infant mortality data to ... 
