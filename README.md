@@ -23,6 +23,6 @@ There are seven columns in this dataset:
 * Region: The US resedential area: Northeast, Northwest, Southeast or Southwest
 * Charges: Individual medical costs billed by health insurance 
 
-
+![Image](Insurance.png)
 
 
