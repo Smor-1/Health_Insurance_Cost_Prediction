@@ -1,5 +1,12 @@
 # Predicting Health Insurance Costs
 
+## Segment 1 Roles & Responsibilities
+
+Massimo - Data Engineer
+Roza - Data Scientist
+Mark - Project Manager / GitHub Cleanup
+Sandy - Readme Management / Project Description Write Up
+
 ## Background & Rationale
 
 It is well known that how much an individual pays for insurance policies are very case dependent. One person may be paying a lot more than another due to seemingly unknown factors. In the case of health insurance, various lifestyle situations such as being a smoker, having more than one child or even the region you live in has an impact on how much you are charged. 
