@@ -2,10 +2,10 @@
 
 ## Segment 1 Roles & Responsibilities
 
-Massimo - Data Engineer
-Roza - Data Scientist
-Mark - Project Manager / GitHub Cleanup
-Sandy - Readme Management / Project Description Write Up
+* Massimo - Data Engineer
+* Roza - Data Scientist
+* Mark - Project Manager / GitHub Cleanup
+* Sandy - Readme Management / Project Description Write Up
 
 ## Background & Rationale
 
