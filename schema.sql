@@ -1,0 +1,14 @@
+CREATE TABLE info (
+    ID SERIAL PRIMARY KEY,
+    age INTEGER NOT NULL,
+    sex VARCHAR(10) NOT NULL,
+    bmi FLOAT NOT NULL,
+    children INTEGER NOT NULL,
+    smoker VARCHAR(3) NOT NULL,
+    region VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE charges (
+    ID INTEGER PRIMARY KEY,
+    charges FLOAT NOT NULL
+);
