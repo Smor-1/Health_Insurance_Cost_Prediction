@@ -5,10 +5,10 @@ CREATE TABLE info (
     bmi FLOAT NOT NULL,
     children INTEGER NOT NULL,
     smoker VARCHAR(3) NOT NULL,
-    region VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE charges (
-    ID INTEGER PRIMARY KEY,
+    ID VARCHAR(10) PRIMARY KEY,
+    region VARCHAR(20) NOT NULL,
     charges FLOAT NOT NULL
 );
