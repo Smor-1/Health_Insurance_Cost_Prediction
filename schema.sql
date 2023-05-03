@@ -1,3 +1,4 @@
+-- Info table creation, holds individual info
 CREATE TABLE info (
     ID SERIAL PRIMARY KEY,
     age INTEGER NOT NULL,
