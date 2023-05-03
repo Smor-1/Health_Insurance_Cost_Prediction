@@ -4,7 +4,7 @@ CREATE TABLE info (
     sex VARCHAR(10) NOT NULL,
     bmi FLOAT NOT NULL,
     children INTEGER NOT NULL,
-    smoker VARCHAR(3) NOT NULL,
+    smoker VARCHAR(3) NOT NULL
 );
 
 CREATE TABLE charges (
