@@ -35,6 +35,6 @@ There are seven columns in this dataset:
 ## Machine learning method 
 In this study we have continuous data for charges, therefore regression method should be used. Up to now the best result that we got is from Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi.
 
-![age vs charge](Resources/RandomForestRegressor_age_charges.PNG)
+![age vs charge](Resources/RandomForestRegressor_age_charges.png)
 
-![age vs charge](Resources/RandomForestRegressor_bmi_charges.PNG)
+![age vs charge](Resources/RandomForestRegressor_bmi_charges.png)
