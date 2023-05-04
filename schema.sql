@@ -1,5 +1,6 @@
+-- Info table creation, holds individual info
 CREATE TABLE info (
-    ID SERIAL PRIMARY KEY,
+    ID VARCHAR(10) PRIMARY KEY,
     age INTEGER NOT NULL,
     sex VARCHAR(10) NOT NULL,
     bmi FLOAT NOT NULL,
