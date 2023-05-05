@@ -38,3 +38,11 @@ In this study we have continuous data for charges, therefore regression method s
 ![age vs charge](Resources/RandomForestRegressor_age_charges.png)
 
 ![age vs charge](Resources/RandomForestRegressor_bmi_charges.png)
+
+## Database
+To hold our data we are using a postgres relational database with two tables. Each patient is assigned a unique Identifier which relates our tables, "info" contains information on each patient and "charges" cointain their insurance charges as well as their location. The Schema is provided in schema.sql as well as a join statement to bring the tables together in joins_queries.sql.
+
+### ERD
+
+![Image](Resources/Database_ERD.png)
+
