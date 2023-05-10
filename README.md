@@ -87,7 +87,7 @@ It can be seen that where the non-smoker charges nearly ends (15000) smoker char
 
 ![smoker vs charge](Resources/smoker_charge.png) ![non-smoker vs charge](Resources/non_smoker_charge.png)
 
-
+As it can be seen, in the data there is 2 catagory in each plot e.g. high paying smokers, low paying smoker, high paying non-smoker and low paying non-smokers. Most of our data is low paying non-smokers that we should be aware of. The difference between high paying and low paying is still under investigation as well.
 
 ## Machine learning method 
 In this study we have continuous data for charges, therefore regression method should be used. Generating seaborn heatmap confirms that the charges are very dependent on being smoker or not as we found out in the data exploration phase.
