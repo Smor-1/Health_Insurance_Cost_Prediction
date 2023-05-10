@@ -1,12 +1,16 @@
 # Predicting Health Insurance Costs
 
-## Roles & Responsibilities
+## Roles, Responsibilities & Project Status
 |  Name  | Role Week 1 | Role Week 2 |  Role Week 3 |
 |:--------:|:--------:|:--------:|:--------:|
 | Massimo | Data Engineer  |  Data Exploration / Tabeleau |  TBD  |
 | Roza | Data Scientist  |  Readme Management / Project Description Write Up  |  TBD  |
 | Mark | Project Manager / GitHub Cleanup  |  Presentation |  TBD  |
 | Sandy | Readme Management / Project Description Write Up  |  Data Scientist |  TBD  |
+
+|    | Data Exploration | Machin Learnin |  Tableau | Website |
+|:--------:|:--------:|:--------:|:--------:|:--------:|
+| Project Status | Completed | in process | in process | in process |
 
 ## Background & Rationale
 
@@ -129,6 +133,8 @@ Currently Random Forest Regressor but we are suspecting that nural network will 
 Being smoker is one of the main influential parameters for determining health insurance. The next parameters are age and BMI. Parameters such as sex, number of childeren and region are not as important as the rest of parameters  
 
 ## Technologies, languages, tools, and algorithms
+
+Technologies: 
 <p align="center">
 <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python" height="40" style="vertical-align:top; margin:4px">
 <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" alt="VS Code" height="40" style="vertical-align:top; margin:4px">
