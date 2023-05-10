@@ -22,7 +22,7 @@ There are two main questions we wanted to answer in this endeavour:
 
 ## Dataset 
 
-There are seven columns in this dataset: 
+There are seven columns and 1338 non-null rows in this dataset, columns include: 
 * Age: Age of the primary beneficiary
 * Sex: Male or Female
 * BMI: Body Mass Index of the primary beneficiary
@@ -32,6 +32,8 @@ There are seven columns in this dataset:
 * Charges: Individual medical costs billed by health insurance 
 
 ![Image](Insurance.png)
+
+The source for the dataset is https://www.kaggle.com/datasets/mirichoi0218/insurance
 
 ## Database
 To hold our data we are using a postgres relational database with two tables. Each patient is assigned a unique Identifier which relates our tables, "info" contains information on each patient and "charges" cointain their insurance charges as well as their location. The Schema is provided in schema.sql as well as a join statement to bring the tables together in joins_queries.sql.
@@ -45,7 +47,7 @@ To hold our data we are using a postgres relational database with two tables. Ea
 
 
 ## Machine learning method 
-In this study we have continuous data for charges, therefore regression method should be used. Up to now the best result that we got is from Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi.
+In this study we have continuous data for charges, therefore regression method should be used. Up to now the best result that we got is from Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi. The input for our model are age, sex, BMI, number of children, Being smoker or not and the region. The out put of our model is the individual medical costs billed by the health insurance.
 
 ![age vs charge](Resources/RandomForestRegressor_age_charges.png)
 
