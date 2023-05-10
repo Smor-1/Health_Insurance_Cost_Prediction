@@ -95,13 +95,21 @@ In this study we have continuous data for charges, therefore regression method s
 ![Heat map](Resources/heatmap.png)
 
 According to this heatmap, smoker, age and BMI are the main contributer and have a strong contribution to the charges column.
+Machin learning models that are used are LinearRegression, DecisionTreeRegressor, RandomForestRegressor and Nural Network (not completed yet). The results are summarized in the next table:
+
+|  Model  | Mean Squared | R Squared |
+|:--------:|:--------:|:--------:|
+| LinearRegression |  37068872  |  TBD  |
+| DecisionTreeRegressor |  41378968  |  TBD  |
+| RandomForestRegressor |  29639376  |  TBD  |
+| Nural Network |  TBD  |  TBD  |
+
 
 Up to now the best result that we got is from Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi. The input for our model are age, sex, BMI, number of children, Being smoker or not and the region. The out put of our model is the individual medical costs billed by the health insurance.
 
 ![age vs charge](Resources/RandomForestRegressor_age_charges.png)
 
 ![age vs charge](Resources/RandomForestRegressor_bmi_charges.png)
-
 
 ## Dashboard Design
 The presentation of the data will be structured in columns across the display. The dashboard features visualizations that represent the main data points prominently on the left side, along with written details which explain the data and the application of this information. The dashboard will feature a large area that will have a space for viewers to input different data points of their own, and these will generate visualizations that correspond to those point. This may be one single chart or several to adequately represent the infomation being called.
