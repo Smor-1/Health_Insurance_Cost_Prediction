@@ -83,7 +83,10 @@ The differnece is huge. It seems that being an smoker is bad for both your healt
 
 ![charges smoker vs non-smoker](Resources/charges_smoker_non_smoker.png)
 
-It can be seen that where the non-smoker charges nearly ends (15000) smoker charges just starts and goes higher. 
+It can be seen that where the non-smoker charges nearly ends (15000) smoker charges just starts and goes higher. Next lets plot them sepratly with age to see if still age is effective parameters compare to being smoker.
+
+![smoker vs charge](Resources/smoker_charge.png) ![non-smoker vs charge](Resources/non_smoker_charge.png)
+
 
 
 ## Machine learning method 
@@ -128,3 +131,4 @@ Being smoker is one of the main influential parameters for determining health in
 <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" alt="HTML" height="40" style="vertical-align:top; margin:4px">
 <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" alt="CSS" height="40" style="vertical-align:top; margin:4px">
 </p>
+Liberaries that are used : Pandas, numpy, Matplotlib, hvplot, plotly, random, string, seaborn and sklearn 
