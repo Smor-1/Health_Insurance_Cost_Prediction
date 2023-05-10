@@ -43,11 +43,51 @@ To hold our data we are using a postgres relational database with two tables. Ea
 ![Image](Resources/Database_ERD.png)
 
 ## Data Exploration
+To explore the data histogram of the columns will show how our data looks like. The age distribution is shown in the next graph
+
+![age distribution](Resources/histo_age.png)
+
+It is looks like that we have data for all ages which is a good start. Now lets take a look at the BMI distribution.
+
+![BMI distribution](Resources/histo_BMI.png)
+
+BMI has fairly normal distribution and it should work for our data analysis. Next number of the childeren
+
+![childeren distribution](Resources/histo_childeren.png)
+
+This is what we expected, but it should be noted that there is not enough information for higher than 4 childeren in the dataset. Next let's explore our target in machin learning section which is the cost of the health insurance.
+
+![charges distribution](Resources/histo_charges.png)
+
+It seems that our data is right skewed which means that we will have to deal with it somehow. For now lets explore more and find out if there is relation between sex of the individual to the charges they pay by getting a mean. 
+
+![mean sex](Resources/mean_sex.png)
+
+It seems that male individual are paying a bit more than female individuals.
+
+![mean region](Resources/mean_region.png)
+
+Now lets see if number of chil
+
+![mean childeren](Resources/mean_childeren.png)
+
+![mean age plot](Resources/mean_age_plot.png)
+
+![mean smoker](Resources/mean_smoker.png)
+
+![charges smoker vs non-smoker](Resources/charges_smoker_non_smoker.png)
+
 
 
 
 ## Machine learning method 
-In this study we have continuous data for charges, therefore regression method should be used. Up to now the best result that we got is from Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi. The input for our model are age, sex, BMI, number of children, Being smoker or not and the region. The out put of our model is the individual medical costs billed by the health insurance.
+In this study we have continuous data for charges, therefore regression method should be used. Generating seaborn heatmap confirms that the charges are very dependent on being smoker or not as we found out in the data exploration phase.
+
+![Heat map](Resources/heatmap.png)
+
+According to this heatmap, smoker, age and BMI are the main contributer and have a strong contribution to the charges column.
+
+Up to now the best result that we got is from Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi. The input for our model are age, sex, BMI, number of children, Being smoker or not and the region. The out put of our model is the individual medical costs billed by the health insurance.
 
 ![age vs charge](Resources/RandomForestRegressor_age_charges.png)
 
