@@ -101,15 +101,16 @@ In this study we have continuous data for charges, therefore regression method s
 According to this heatmap, smoker, age and BMI are the main contributer and have a strong contribution to the charges column.
 Machin learning models that are used are LinearRegression, DecisionTreeRegressor, RandomForestRegressor and Nural Network (not completed yet). The results are summarized in the next table:
 
-|  Model  | Mean Squared | R Squared |
-|:--------:|:--------:|:--------:|
-| LinearRegression |  37068872  |  TBD  |
-| DecisionTreeRegressor |  41378968  |  TBD  |
-| RandomForestRegressor |  29639376  |  TBD  |
-| Nural Network |  TBD  |  TBD  |
+|  Model  | Mean Squared | Root Mean Squared Error | Mean Absolute Error | R-squared | 
+|:--------:|:--------:|:--------:|:--------:|:--------:|
+| LinearRegression |  32729205  |  5720  |   3833  |  0.76  |
+| DecisionTreeRegressor |  42436815  |  6514  |  3029  |  0.69  |
+| RandomForestRegressor |  25650153  |  5064  |  2790  |  0.80  |
+| PCA + RandomForestRegressor |  22748665  |  4769  |  2653  |  0.83  |
+| Nural Network |  TBD  |  TBD  |  TBD  |  TBD  |
 
 
-Up to now the best result that we got is from Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi. The input for our model are age, sex, BMI, number of children, Being smoker or not and the region. The out put of our model is the individual medical costs billed by the health insurance.
+Up to now the best result that we got is from combining PCA and Random Forest Regressor. At the end of our data exploration we found that there are four category of data high paying smokers, low paying smoker, high paying non-smoker and low paying non-smokers. Using PCA help catagorizing this information and adding a column calling it class helps the Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi. The input for our model are age, sex, BMI, number of children, Being smoker or not and the region. The out put of our model is the individual medical costs billed by the health insurance.
 
 ![age vs charge](Resources/RandomForestRegressor_age_charges.png)
 
