@@ -3,9 +3,9 @@
 ## Roles & Responsibilities
 |  Name  | Role Week 1 | Role Week 2 |  Role Week 3 |
 |:--------:|:--------:|:--------:|:--------:|
-| Massimo | Data Engineer  |  Data Exploration / Presentation |  TBD  |
+| Massimo | Data Engineer  |  Data Exploration / Tabeleau |  TBD  |
 | Roza | Data Scientist  |  Readme Management / Project Description Write Up  |  TBD  |
-| Mark | Project Manager / GitHub Cleanup  |  Presentation / Tabeleau |  TBD  |
+| Mark | Project Manager / GitHub Cleanup  |  Presentation |  TBD  |
 | Sandy | Readme Management / Project Description Write Up  |  Data Scientist |  TBD  |
 
 ## Background & Rationale
