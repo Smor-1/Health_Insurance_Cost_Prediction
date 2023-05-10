@@ -113,7 +113,7 @@ The presentation of the data will be structured in columns across the display. T
 ## Conclusion and Ansewring Research Questions
 
 1) What model is most predictive of how much someone is charged for health insurance? 
-2) 
+
 Currently Random Forest Regressor but we are suspecting that nural network will have a better results.
 
 3) What factors in this dataset are most influential of how much someone is charged for health insurance? 
@@ -131,4 +131,5 @@ Being smoker is one of the main influential parameters for determining health in
 <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" alt="HTML" height="40" style="vertical-align:top; margin:4px">
 <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" alt="CSS" height="40" style="vertical-align:top; margin:4px">
 </p>
-Liberaries that are used : Pandas, numpy, Matplotlib, hvplot, plotly, random, string, seaborn and sklearn 
+Liberaries that are used : Pandas, numpy, Matplotlib, hvplot, plotly, random, string, pickle, seaborn and sklearn 
+Machin learning models used: PCA, LinearRegression, DecisionTreeRegressor, RandomForestRegressor and Nural Network
