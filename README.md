@@ -63,21 +63,27 @@ It seems that our data is right skewed which means that we will have to deal wit
 
 ![mean sex](Resources/mean_sex.png)
 
-It seems that male individual are paying a bit more than female individuals.
+It seems that male individual are paying a bit more than female individuals. Next lets take a look at the regions.
 
 ![mean region](Resources/mean_region.png)
 
-Now lets see if number of chil
+Simlarly they are close to each other but we can say that south east region is paying more but at the same time it has a higher BMI so we need to dig deeper. Now lets check if the number of childeren has an effect on our data.
 
 ![mean childeren](Resources/mean_childeren.png)
 
+It seems that individual with 3 childeren has to pay more, but still this is early to predict this. Now lets take a look at the average of charges for each age group.
+
 ![mean age plot](Resources/mean_age_plot.png)
+
+There is an obvious trend here. As it can be seen the older an individual gets, he or she has to pay more for the insurance. lastly let's take a look at the effect of being smoker on the amount of the payment in insurance.
 
 ![mean smoker](Resources/mean_smoker.png)
 
+The differnece is huge. It seems that being an smoker is bad for both your health and finances. Lets go deeper and seprate the charges for smoker and non smokers.
+
 ![charges smoker vs non-smoker](Resources/charges_smoker_non_smoker.png)
 
-
+It can be seen that where the non-smoker charges nearly ends (15000) smoker charges just starts and goes higher. 
 
 
 ## Machine learning method 
@@ -98,6 +104,18 @@ Up to now the best result that we got is from Random Forest Regressor. The follo
 The presentation of the data will be structured in columns across the display. The dashboard features visualizations that represent the main data points prominently on the left side, along with written details which explain the data and the application of this information. The dashboard will feature a large area that will have a space for viewers to input different data points of their own, and these will generate visualizations that correspond to those point. This may be one single chart or several to adequately represent the infomation being called.
 
 ![Dashboard_Draft_1](https://user-images.githubusercontent.com/119453505/236359817-37a3d8b3-70d5-4e41-b40a-748b537c2a4f.png)
+
+
+
+## Conclusion and Ansewring Research Questions
+
+1) What model is most predictive of how much someone is charged for health insurance? 
+2) 
+Currently Random Forest Regressor but we are suspecting that nural network will have a better results.
+
+3) What factors in this dataset are most influential of how much someone is charged for health insurance? 
+
+Being smoker is one of the main influential parameters for determining health insurance. The next parameters are age and BMI. Parameters such as sex, number of childeren and region are not as important as the rest of parameters  
 
 ## Technologies, languages, tools, and algorithms
 <p align="center">
