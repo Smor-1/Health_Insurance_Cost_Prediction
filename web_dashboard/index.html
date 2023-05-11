@@ -9,24 +9,36 @@
   
   <title>Health Insurance Cost Prediction Dashboard</title>
 </head>
-<body>
-  <h1>Health Insurance Cost Prediction</h1>
-  <form id="prediction-form">
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" required>
-    <br>
-    <label for="bmi">BMI:</label>
-    <input type="number" step="0.01" id="bmi" name="bmi" required>
-    <br>
-    <label for="smoker">Smoker:</label>
-    <input type="checkbox" id="smoker" name="smoker">
-    <br>
-    <button type="submit">Predict Insurance Cost</button>
-    
-  </form>
-  <h2 id="result"></h2>
 
+<body>
+    <h1>Health Insurance Cost Prediction</h1>
+    <form id="prediction-form">
+      <table>
+        <tr>
+          <th>Attribute</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td><label for="age">Age:</label></td>
+          <td><input type="number" id="age" name="age" required></td>
+        </tr>
+        <tr>
+          <td><label for="bmi">BMI:</label></td>
+          <td><input type="number" step="0.01" id="bmi" name="bmi" required></td>
+        </tr>
+        <tr>
+          <td><label for="smoker">Smoker:</label></td>
+          <td><input type="checkbox" id="smoker" name="smoker"></td>
+        </tr>
+      </table>
+      <button type="submit">Predict Insurance Cost</button>
+
+  </form>
+  <h2 id="result" style="color: #0b0000; text-align: center;"></h2>
+
+  <!-- LINKS to JS -->
   <script src="js/main.js"></script>
+
 </body>
 </html>
 
