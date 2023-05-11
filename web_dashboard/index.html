@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Insurance Cost Prediction Dashboard</title>
+</head>
+<body>
+  <h1>Health Insurance Cost Prediction</h1>
+  <form id="prediction-form">
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+    <br>
+    <label for="bmi">BMI:</label>
+    <input type="number" step="0.01" id="bmi" name="bmi" required>
+    <br>
+    <label for="smoker">Smoker:</label>
+    <input type="checkbox" id="smoker" name="smoker">
+    <br>
+    <button type="submit">Predict Insurance Cost</button>
+  </form>
+  <h2 id="result"></h2>
+  <script src="js/main.js"></script>
+</body>
+</html>
