@@ -8,9 +8,9 @@
 | Mark | Project Manager / GitHub Cleanup  |  Presentation |  TBD  |
 | Sandy | Readme Management / Project Description Write Up  |  Data Scientist |  TBD  |
 
-|    | Data Exploration | Machin Learnin |  Tableau | Website |
-|:--------:|:--------:|:--------:|:--------:|:--------:|
-| Project Status | Completed | in process | in process | in process |
+|    | Data base | Data Exploration | Machin Learnin |  Tableau | Website |
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+| Project Status | Completed  | Completed | in process | in process | in process |
 
 ## Background & Rationale
 
@@ -107,7 +107,7 @@ Machin learning models that are used are LinearRegression, DecisionTreeRegressor
 | DecisionTreeRegressor |  42436815  |  6514  |  3029  |  0.69  |
 | RandomForestRegressor |  25650153  |  5064  |  2790  |  0.80  |
 | PCA + RandomForestRegressor |  22748665  |  4769  |  2653  |  0.83  |
-| Nural Network |  TBD  |  TBD  |  TBD  |  TBD  |
+| Neural Network |  TBD  |  TBD  |  TBD  |  TBD  |
 
 
 Up to now the best result that we got is from combining PCA and Random Forest Regressor. At the end of our data exploration we found that there are four category of data high paying smokers, low paying smoker, high paying non-smoker and low paying non-smokers. Using PCA help catagorizing this information and adding a column calling it class helps the Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi. The input for our model are age, sex, BMI, number of children, Being smoker or not and the region. The out put of our model is the individual medical costs billed by the health insurance.
