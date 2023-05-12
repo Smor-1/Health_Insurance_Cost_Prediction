@@ -1,0 +1,62 @@
+/* General styling for the body element: */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://source.unsplash.com/random/1920x1080"); /* Background image link here */
+    background-size: cover;
+    background-position: center;
+  }
+
+  
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-top: 2rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label, input {
+    margin: 0.5rem;
+  }
+  
+  button {
+    margin-top: 1rem;
+  }
+  
+  /* Styling for the table element: */
+  table {
+    margin-top: 1rem;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    color: #fff;
+  }
+  
+  th {
+    background-color: #4CAF50;
+  }
+  
+  /* Styling for the even table rows: */
+  tr:nth-child(even) {
+    background-color: rgba(76, 175, 80, 0.7);
+  }
+  
+  /* Styling for the odd table rows: */
+  tr:nth-child(odd) {
+    background-color: rgba(76, 175, 80, 0.5);
+  }
+  

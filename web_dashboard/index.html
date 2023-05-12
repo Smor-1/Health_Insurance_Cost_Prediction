@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Added fonts and linked to css -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Health Insurance Cost Prediction Dashboard</title>
+</head>
+
+<body>
+    <h1>Health Insurance Cost Prediction</h1>
+    <form id="prediction-form">
+      <table>
+        <tr>
+          <th>Attribute</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td><label for="age">Age:</label></td>
+          <td><input type="number" id="age" name="age" required></td>
+        </tr>
+        <tr>
+          <td><label for="bmi">BMI:</label></td>
+          <td><input type="number" step="0.01" id="bmi" name="bmi" required></td>
+        </tr>
+        <tr>
+          <td><label for="smoker">Smoker:</label></td>
+          <td><input type="checkbox" id="smoker" name="smoker"></td>
+        </tr>
+      </table>
+      <button type="submit">Predict Insurance Cost</button>
+
+  </form>
+  <h2 id="result" style="color: #0b0000; text-align: center;"></h2>
+
+  <!-- LINKS to JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+
+<!-- -->
