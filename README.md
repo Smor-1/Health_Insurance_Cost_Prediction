@@ -8,7 +8,7 @@
 | Mark | Project Manager / GitHub Cleanup  |  Presentation |  TBD  |
 | Sandy | Readme Management / Project Description Write Up  |  Data Scientist |  TBD  |
 
-|    | Data base | Data Exploration | Machin Learning |  Tableau | Website |
+|    | Data base | Data Exploration | Machine Learning |  Tableau | Website |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
 | Project Status | Completed  | Completed | Completed | in progress | in progress |
 
