@@ -47,61 +47,63 @@ To hold our data, we are using a postgreSQL relational database with two tables.
 ![Image](Resources/Database_ERD.png)
 
 ## Data Exploration
-To explore the data, a histogram of the columns was made. The results of which can be found below. 
+To explore the data, a histogram of each column was made. The results of which can be found below. 
 
 Age Distribution - it looks like that we have data for all ages, which is a good start! 
 
 ![age distribution](Resources/histo_age.png)
 
-BMI Distribution - 
+BMI Distribution - it seems to be fairly normal distributed, which is great for our subsequent analysis. 
 
 ![BMI distribution](Resources/histo_BMI.png)
 
-BMI has fairly normal distribution and it should work for our data analysis. Next number of the childeren
+Number of Children Distribution - this is what we expected, but it should be noted that there is not enough information for higher than 4 childeren in the dataset.
 
 ![childeren distribution](Resources/histo_childeren.png)
 
-This is what we expected, but it should be noted that there is not enough information for higher than 4 childeren in the dataset. Next let's explore our target in machin learning section which is the cost of the health insurance.
+Charges Distribution - as can be seen below, it seems that our data is right skewed with most charges being less than $15,000. 
 
 ![charges distribution](Resources/histo_charges.png)
 
-It seems that our data is right skewed which means that we will have to deal with it somehow. For now lets explore more and find out if there is relation between sex of the individual to the charges they pay by getting a mean. 
+Next, lets explore more and find out if there is relation between an individuals sex and the charges they pay. It seems that males pay slightly more than females.
 
 ![mean sex](Resources/mean_sex.png)
 
-It seems that male individual are paying a bit more than female individuals. Next lets take a look at the regions.
+Next lets take a look at the regions. Simlarly, they are close to each other but we can say that south east region is paying more but at the same time it has a higher BMI so we need to dig deeper
 
 ![mean region](Resources/mean_region.png)
 
-Simlarly they are close to each other but we can say that south east region is paying more but at the same time it has a higher BMI so we need to dig deeper. Now lets check if the number of childeren has an effect on our data.
+Now lets check if the number of children has any impact on our data. It seems that individual with 3 kids has to pay more, but still this is early to predict this.
 
 ![mean childeren](Resources/mean_childeren.png)
 
-It seems that individual with 3 childeren has to pay more, but still this is early to predict this. Now lets take a look at the average of charges for each age group.
+Now lets take a look at the average of charges for each age group. There is an obvious trend here. As can be seen below, the older an individual gets, they incur larger insurance costs.
 
 ![mean age plot](Resources/mean_age_plot.png)
 
-There is an obvious trend here. As it can be seen the older an individual gets, he or she has to pay more for the insurance. lastly let's take a look at the effect of being smoker on the amount of the payment in insurance.
+lastly let's take a look at the effect of being smoker. The differnece is huge. It seems that being an smoker is bad for both your health and finances! 
 
 ![mean smoker](Resources/mean_smoker.png)
 
-The differnece is huge. It seems that being an smoker is bad for both your health and finances. Lets go deeper and seprate the charges for smoker and non smokers.
+Lets go deeper and seprate the charges for smoker and non smokers.
 
 ![charges smoker vs non-smoker](Resources/charges_smoker_non_smoker.png)
 
-It can be seen that where the non-smoker charges nearly ends (15000) smoker charges just starts and goes higher. Next lets plot them sepratly with age to see if still age is effective parameters compare to being smoker.
+It can be seen that where the non-smoker charges nearly end (around $15,000), a smoker's charges just starts and goes higher! 
+Next lets plot them separately with age to see its impact compared to being a smoker.
 
 ![smoker vs charge](Resources/smoker_charge.png) ![non-smoker vs charge](Resources/non_smoker_charge.png)
 
-As it can be seen, in the data there is 2 catagory in each plot e.g. high paying smokers, low paying smoker, high paying non-smoker and low paying non-smokers. Most of our data is low paying non-smokers that we should be aware of. The difference between high paying and low paying is still under investigation as well.
+As it can be seen, in the data there are 2 categories in each plot e.g. high paying smokers, low paying smokers, high paying non-smokers and low paying non-smokers. Most of our data is low paying non-smokers that we should be aware of. The difference between high paying and low paying is still under investigation as well.
 
 ## Machine Learning 
-In this study we have continuous data for charges, therefore regression method should be used. Generating seaborn heatmap confirms that the charges are very dependent on being smoker or not as we found out in the data exploration phase.
+In this study we have continuous data for charges, therefore various regression models were applied. Generating a heatmap using the seaborn visualization library confirms that the charges are very dependent on being smoker or not as we found out in the data exploration stage.
 
 ![Heat map](Resources/heatmap.png)
 
-According to this heatmap, smoker, age and BMI are the main contributer and have a strong contribution to the charges column.
-Machin learning models that are used are LinearRegression, DecisionTreeRegressor, RandomForestRegressor and Nural Network (not completed yet). The results are summarized in the next table:
+According to this heatmap, smoker, age and BMI are the main contributers and likely have a large positive impact on the charges (target) column.
+
+The machine learning models that we used are DecisionTreeRegressor, LinearRegression, RandomForestRegressor both with and without a Principal Component Analysis (PCA) and Neural Network. The results are summarized in the next table:
 
 |  Model  | Mean Squared | Root Mean Squared Error | Mean Absolute Error | R-squared | 
 |:--------:|:--------:|:--------:|:--------:|:--------:|
@@ -111,9 +113,9 @@ Machin learning models that are used are LinearRegression, DecisionTreeRegressor
 | PCA & RandomForestRegressor |  22,748,665  |  4,769  |  2,653  |  0.83  |
 | Neural Network |  20,663,958  |  4,545  |  2,564  |  0.85  |
 
-Note that regression model metrics are based on testing scores. 
+Note that our regression model metrics are based on testing scores. 
 
-Up to now the best result that we got is from combining PCA and Random Forest Regressor. At the end of our data exploration we found that there are four category of data high paying smokers, low paying smoker, high paying non-smoker and low paying non-smokers. Using PCA help catagorizing this information and adding a column calling it class helps the Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi. The input for our model are age, sex, BMI, number of children, Being smoker or not and the region. The out put of our model is the individual medical costs billed by the health insurance.
+The best model we were able to configure was a neural network regression model. At the end of our data exploration we found that there are four category of data high paying smokers, low paying smoker, high paying non-smoker and low paying non-smokers. Using PCA help catagorizing this information and adding a column calling it class helps the Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi. The input for our model are age, sex, BMI, number of children, Being a smoker or not and the region. The output of our model is the individual medical costs billed by the health insurance.
 
 ![age vs charge](Resources/RandomForestRegressor_age_charges.png)
 
@@ -126,15 +128,18 @@ The presentation of the data will be structured in columns across the display. T
 
 
 
-## Conclusion and Ansewring Research Questions
+## Conclusion 
+
+To reiterate, we set out to answer two main questions. After exploratory data analysis and the building of many machine learning models, we have answers that we are excited to share. 
 
 1) What model is most predictive of how much someone is charged for health insurance? 
 
-Currently Random Forest Regressor but we are suspecting that nural network will have a better results.
+The neural network model provided the lowest mean squared error (MSE), lowest mean absolute error (MAE) and the highest r2 score. This model used an input layer with 2000 neurons and relu as its activation function, 5 hidden layers with 1000, 500, 250, 250 and 150 neurons each using relu for activation and an output layer with 1 neuron a linear activation function. The model used adam as an optimizer and ran for 100 epochs. 
+Given the three metrics we used to evaluate our regression models, the neural network proved most predictive of how much someone is charged. 
 
-3) What factors in this dataset are most influential of how much someone is charged for health insurance? 
+2) What factors in this dataset are most influential of how much someone is charged for health insurance? 
 
-Being smoker is one of the main influential parameters for determining health insurance. The next parameters are age and BMI. Parameters such as sex, number of childeren and region are not as important as the rest of parameters  
+Being a smoker is one of the most influential parameters for determining health insurance. The next parameters were age and BMI. Parameters such as sex, number of childeren and region are not as important as the rest of parameters  
 
 ## Technologies, languages, tools, and algorithms
 
@@ -150,4 +155,4 @@ Technologies:
 <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" alt="CSS" height="40" style="vertical-align:top; margin:4px">
 </p>
 Liberaries that are used : Pandas, numpy, Matplotlib, hvplot, plotly, random, string, pickle, seaborn and sklearn 
-Machin learning models used: PCA, LinearRegression, DecisionTreeRegressor, RandomForestRegressor and Nural Network
+Machin learning models used: PCA, LinearRegression, DecisionTreeRegressor, RandomForestRegressor and Neural Network
