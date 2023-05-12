@@ -81,11 +81,11 @@ Now lets take a look at the average of charges for each age group. There is an o
 
 ![mean age plot](Resources/mean_age_plot.png)
 
-lastly let's take a look at the effect of being smoker. The differnece is huge. It seems that being an smoker is bad for both your health and finances! 
+Finally, let's take a look at the effect of being a smoker. The differnece is huge. It seems that being an smoker is bad for both your health and finances! 
 
 ![mean smoker](Resources/mean_smoker.png)
 
-Lets go deeper and seprate the charges for smoker and non smokers.
+Lets go deeper and separate the charges for smokers and non smokers.
 
 ![charges smoker vs non-smoker](Resources/charges_smoker_non_smoker.png)
 
