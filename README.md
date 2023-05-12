@@ -126,7 +126,9 @@ The presentation of the data will be structured in columns across the display. T
 
 ![Dashboard_Draft_1](https://user-images.githubusercontent.com/119453505/236359817-37a3d8b3-70d5-4e41-b40a-748b537c2a4f.png)
 
+## Presentation Slides
 
+https://docs.google.com/presentation/d/1ccXkehr4vkpNUo2GSUCvyaj7RNDK-wd1FaVBfYF6Bjg/edit#slide=id.g243120a58ce_0_134
 
 ## Conclusion 
 
