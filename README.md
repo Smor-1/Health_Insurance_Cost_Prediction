@@ -139,7 +139,7 @@ Given the three metrics we used to evaluate our regression models, the neural ne
 
 2) What factors in this dataset are most influential of how much someone is charged for health insurance? 
 
-Being a smoker is one of the most influential parameters for determining health insurance. The next parameters were age and BMI. Parameters such as sex, number of childeren and region are not as important as the rest of parameters  
+Being a smoker is one of the most influential parameters for determining health insurance. The next parameters were age and BMI. Parameters such as sex, number of childeren and region are not as important as the rest of parameters.  
 
 ## Technologies, languages, tools, and algorithms
 
