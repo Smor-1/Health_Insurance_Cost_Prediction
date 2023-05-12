@@ -1,16 +1,16 @@
 # Predicting Health Insurance Costs
 
 ## Roles, Responsibilities & Project Status
-|  Name  | Role Week 1 | Role Week 2 |  Role Week 3 |
+|  Name  | Week 1 Role | Week 2 Role |  Week 3 Role |
 |:--------:|:--------:|:--------:|:--------:|
 | Massimo | Data Engineer  |  Data Exploration / Tabeleau |  TBD  |
 | Roza | Data Scientist  |  Readme Management / Project Description Write Up  |  TBD  |
 | Mark | Project Manager / GitHub Cleanup  |  Presentation |  TBD  |
 | Sandy | Readme Management / Project Description Write Up  |  Data Scientist |  TBD  |
 
-|    | Data base | Data Exploration | Machin Learnin |  Tableau | Website |
+|    | Data base | Data Exploration | Machin Learning |  Tableau | Website |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| Project Status | Completed  | Completed | in process | in process | in process |
+| Project Status | Completed  | Completed | Completed | in progress | in progress |
 
 ## Background & Rationale
 
@@ -40,18 +40,20 @@ There are seven columns and 1338 non-null rows in this dataset, columns include:
 The source for the dataset is https://www.kaggle.com/datasets/mirichoi0218/insurance
 
 ## Database
-To hold our data we are using a postgres relational database with two tables. Each patient is assigned a unique Identifier which relates our tables, "info" contains information on each patient and "charges" cointain their insurance charges as well as their location. The Schema is provided in schema.sql as well as a join statement to bring the tables together in joins_queries.sql.
+To hold our data, we are using a postgreSQL relational database with two tables. Each patient is assigned a unique Identifier which relates our tables. The info table contains information on each patient and the charges table contains their insurance charges as well as their geographical location. The Schema is provided in schema.sql as well as a join statement to bring the tables together in joins_queries.sql.
 
 ### ERD
 
 ![Image](Resources/Database_ERD.png)
 
 ## Data Exploration
-To explore the data histogram of the columns will show how our data looks like. The age distribution is shown in the next graph
+To explore the data, a histogram of the columns was made. The results of which can be found below. 
+
+Age Distribution - it looks like that we have data for all ages, which is a good start! 
 
 ![age distribution](Resources/histo_age.png)
 
-It is looks like that we have data for all ages which is a good start. Now lets take a look at the BMI distribution.
+BMI Distribution - 
 
 ![BMI distribution](Resources/histo_BMI.png)
 
@@ -93,7 +95,7 @@ It can be seen that where the non-smoker charges nearly ends (15000) smoker char
 
 As it can be seen, in the data there is 2 catagory in each plot e.g. high paying smokers, low paying smoker, high paying non-smoker and low paying non-smokers. Most of our data is low paying non-smokers that we should be aware of. The difference between high paying and low paying is still under investigation as well.
 
-## Machine learning method 
+## Machine Learning 
 In this study we have continuous data for charges, therefore regression method should be used. Generating seaborn heatmap confirms that the charges are very dependent on being smoker or not as we found out in the data exploration phase.
 
 ![Heat map](Resources/heatmap.png)
@@ -103,12 +105,13 @@ Machin learning models that are used are LinearRegression, DecisionTreeRegressor
 
 |  Model  | Mean Squared | Root Mean Squared Error | Mean Absolute Error | R-squared | 
 |:--------:|:--------:|:--------:|:--------:|:--------:|
-| LinearRegression |  32729205  |  5720  |   3833  |  0.76  |
-| DecisionTreeRegressor |  42436815  |  6514  |  3029  |  0.69  |
-| RandomForestRegressor |  25650153  |  5064  |  2790  |  0.80  |
-| PCA + RandomForestRegressor |  22748665  |  4769  |  2653  |  0.83  |
-| Neural Network |  TBD  |  TBD  |  TBD  |  TBD  |
+| DecisionTreeRegressor |  42,436,815  |  6,514  |  3,029  |  0.69  |
+| LinearRegression |  32,729,205  |  5,720  |   3,833  |  0.76  |
+| RandomForestRegressor |  25,650,153  |  5,064  |  2,790  |  0.80  |
+| PCA & RandomForestRegressor |  22,748,665  |  4,769  |  2,653  |  0.83  |
+| Neural Network |  20,663,958  |  4,545  |  2,564  |  0.85  |
 
+Note that regression model metrics are based on testing scores. 
 
 Up to now the best result that we got is from combining PCA and Random Forest Regressor. At the end of our data exploration we found that there are four category of data high paying smokers, low paying smoker, high paying non-smoker and low paying non-smokers. Using PCA help catagorizing this information and adding a column calling it class helps the Random Forest Regressor. The following pictures are showing predicted model versus actual data for age and bmi. The input for our model are age, sex, BMI, number of children, Being smoker or not and the region. The out put of our model is the individual medical costs billed by the health insurance.
 
