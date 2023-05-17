@@ -8,7 +8,7 @@ document.getElementById("prediction-form").addEventListener("submit", async (eve
   const smoker = document.getElementById("smoker").checked ? 1 : 0;
 
   // URL for API
-  const apiUrl = `http://localhost:5000/predict`;
+  const apiUrl = `http://localhost:5500/predict`;
 
   // Data to send
   const data = {
