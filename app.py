@@ -9,8 +9,13 @@ CORS(app)
 # Load the model
 model = joblib.load('finalized_model.sav')
 
-@app.route('/predict/<int:age>/<float:bmi>/<int:smoker>', methods=['GET'])
-def predict(age, bmi, smoker):
+@app.route('/predict', methods=['POST'])
+def predict():
+    # Read the data from the JSON body of the request
+    data = request.get_json()
+    age = data['age']
+    bmi = data['bmi']
+    smoker = data['smoker']
     # Prepare the feature vector for prediction
     features = [[age, bmi, smoker]]
 
