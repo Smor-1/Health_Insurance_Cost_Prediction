@@ -9,7 +9,7 @@ CORS(app)
 # Load the model
 model = joblib.load('finalized_model.sav')
 
-@app.route('/predict', methods=['POST', 'OPTIONS''])
+@app.route('/predict', methods=['POST', 'OPTIONS'])
 def predict():
     if request.method == 'OPTIONS':
         # CORS preflight
@@ -40,5 +40,5 @@ def predict():
         #return jsonify(insurance_cost=insurance_cost)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5500)
 
