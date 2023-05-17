@@ -25,7 +25,15 @@ def predict():
     # Prepare the prediction for JSON serialization
     insurance_cost = prediction[0]
 
-    return jsonify(insurance_cost=insurance_cost)
+    # CORS headers
+    response = jsonify(insurance_cost=insurance_cost)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+
+    return response
+
+    #return jsonify(insurance_cost=insurance_cost)
 
 if __name__ == '__main__':
     app.run(debug=True)
