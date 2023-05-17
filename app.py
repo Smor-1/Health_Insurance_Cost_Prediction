@@ -4,7 +4,7 @@ import joblib
 app = Flask(__name__)
 
 # Load the model
-model = joblib.load('model.joblib')
+model = joblib.load('finalized_model.sav')
 
 @app.route('/predict/<int:age>/<float:bmi>/<int:smoker>', methods=['GET'])
 def predict(age, bmi, smoker):
