@@ -1,7 +1,10 @@
 from flask import Flask, jsonify
 import joblib
+from flask_cors import CORS
 
 app = Flask(__name__)
+# enable CORS
+CORS(app)
 
 # Load the model
 model = joblib.load('finalized_model.sav')
