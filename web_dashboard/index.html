@@ -2,17 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Added fonts and linked to css -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
   
-  <title>Health Insurance Cost Prediction Dashboard</title>
+  <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+      <link rel="stylesheet" href="css/styles.css">
+  
+  <title>AI Powered Insurance Charges Predictor</title>
 </head>
 
+<body class="bg-white">
+  <div class="wrapper">
+   
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1 class="display-4"> AI Powered Insurance Charges Predictor</h1>
+    </div>
+
+<!-- Body: title and image -->
+
 <body>
-    <h1>Health Insurance Cost Prediction</h1>
-    <form id="prediction-form">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 article-title">
+        <h2>Illustrating Key Variables of Insurance Costs</h2>
+        <img id = "left" src= "images/heatmap.png"/> 
+        <p>This chart plots out several variables to determine their impact on personal health insurance costs. Each variable is assigned a decimal number, and the closer the number is to the number 1 the more is it correlated with increased insurance coverage costs. From this we understand that age, body mass index (BMI), and smoking have the most profound impact on costs.</p>
+        </div>
+      <div class="col-md-8 article-p">
+        
+    
+    <!-- Body: title and paragraph -->       
+        
+    <h2>How does this apply to a single person?</h2>
+      <p>By looking at the chart provided here and its accompanying explanation we can tell that there are certain variables that are more closely tied to increased health insurance costs.</p> 
+        <p>This is helpful information, however on its own it does not provide useful information for individuals and their unique circumstances based on them and how they relate to these three key variables.</p>
+          <p>We can take this data one step further and make it widely applicable using machine learning algorithms. The table below lists these three variables and provides a place for individual data to be entered. Once this is submitted the algorithm will process the inputs to predict annual insurance costs.</p>
+        
+      
+    
+    <!-- Body: title and interactive table -->
+
+    <h3>Health Insurance Cost Predictor</h3>
+      <form id="prediction-form">
       <table>
         <tr>
           <th>Attribute</th>
@@ -30,17 +68,56 @@
           <td><label for="smoker">Smoker:</label></td>
           <td><input type="checkbox" id="smoker" name="smoker"></td>
         </tr>
+
+        <tr>
+        <td colspan="2" align='center'> 
+        <button type='submit' class = 'right'> Predict Annual Insurance Cost </button> 
+        </td>
+        </tr>
+
       </table>
-      <button type="submit">Predict Insurance Cost</button>
+    
+    
+      
+           
 
   </form>
-  <h2 id="result" style="color: #0b0000; text-align: center;"></h2>
+  <h3 id="result" style="color: #0b0000; text-align: right;"></h3>
 
   <!-- LINKS to JS -->
   <script src="js/main.js"></script>
 
+  
+  <!-- Style: Image and Columns -->
+
+  <style>
+    #left { 
+      position: relative; 
+      width: 400px;  
+      height: 400px;  
+      border: 5px solid whitesmoke;  
+      object-fit: fill;  
+      object-position: center;  
+  }  
+
+    #center {
+      position: relative; 
+      width: 400px;  
+      height: 200px;  
+      object-fit: fill;  
+      object-position: center;   
+    }
+
+    #right {
+      position: absolute; 
+      width: 200px;  
+      height: 0px;  
+      object-fit: fill;  
+      object-position: right;   
+    }
+  </style>
+
 </body>
 </html>
-
 
 <!-- -->

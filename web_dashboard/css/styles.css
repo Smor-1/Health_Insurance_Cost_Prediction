@@ -1,21 +1,62 @@
 /* General styling for the body element: */
+
+.jumbotron {
+    background-image: url("../images/green_background_2.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    text-align: center;
+}
+
+
+
 body {
+   background-image: url("../images/green_background_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f7f7f7;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("https://source.unsplash.com/random/1920x1080"); /* Background image link here */
-    background-size: cover;
-    background-position: center;
-  }
+    }
 
   
   h1 {
     font-size: 2rem;
-    text-align: center;
-    color: #fff;
+    font-weight: bolder;
+    text-align: left;
+    color: dimgray;
+    text-shadow: 2px 2px 5px black;
+    margin-top: 2rem;
+    }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    color: dimgray;
+    margin-top: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+    color: dimgray;
+    margin-top: 1rem;
+  }
+
+
+  p {
+    font-size: 1.25rem;
+    text-align: left;
+    color: black;
     margin-top: 2rem;
   }
-  
+
+  style {
+    image-rendering: url("../images/heatmap.png");
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -34,10 +75,11 @@ body {
   table {
     margin-top: 1rem;
     border-collapse: collapse;
-    width: 100%;
-    max-width: 500px;
+    width: 40%;
+    max-width: 550px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 0px;
+    position: right;
   }
   
   th, td {
@@ -60,4 +102,3 @@ body {
     background-color: rgba(76, 175, 80, 0.5);
   }
   
- 
